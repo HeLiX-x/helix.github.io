@@ -1,0 +1,28 @@
+---
+layout: default
+title: Engineering Blog
+---
+
+<div class="layout-page">
+  <div class="home-header">
+    <h1>Engineering Blog</h1>
+    <p>Deep dives into high-performance systems, architecture, and open source.</p>
+  </div>
+
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article class="post-card">
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        </div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        {% if post.excerpt %}
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 35 }}
+          </div>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="read-more">Read article &rarr;</a>
+      </article>
+    {% endfor %}
+  </div>
+</div>
