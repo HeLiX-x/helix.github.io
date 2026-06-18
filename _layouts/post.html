@@ -139,7 +139,8 @@ layout: default
     /* ── metadata header ── */
     const title  = {{ page.title | jsonify }};
     const date   = {{ page.date | date: "%Y-%m-%d" | jsonify }};
-    const url    = {{ site.url | append: site.baseurl | append: page.url | jsonify }};
+    const url    = document.querySelector('link[rel="canonical"]')?.getAttribute('href')
+                   || '{{ site.url }}{{ page.url }}';
     const words  = document.querySelector('.post-content').innerText
                      .split(/\s+/).filter(Boolean).length;
 
