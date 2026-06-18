@@ -9,7 +9,7 @@ Every Go project that needs tokenization lands on the same answer: shell out to 
 
 I wanted a single binary. No sidecar. No CGO. So I built `tokr`, a Byte-Pair Encoding tokenizer in pure Go.
 
-**[GitHub →](https://github.com/Sankalprai224/tokr)**
+<a href="https://github.com/Sankalprai224/tokr" target="_blank" rel="noopener noreferrer" style="color:#f97316;font-weight:700;text-decoration:none;border-bottom:2px solid #f97316;padding-bottom:1px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">GitHub →</a>
 
 ---
 
